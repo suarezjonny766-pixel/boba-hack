@@ -1,0 +1,509 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPACE | Explorando el universo</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #F4F6FF;
+            background: linear-gradient(
+                135deg,
+                #080B1A,
+                #151B3B,
+                #35205F,
+                #123B68
+            );
+            background-attachment: fixed;
+            min-height: 100vh;
+            line-height: 1.8;
+        }
+
+        /* ENCABEZADO */
+
+        header {
+            text-align: center;
+            padding: 30px 15px 20px;
+        }
+
+        h1 {
+            color: #35C8FF;
+            font-size: clamp(40px, 6vw, 60px);
+            letter-spacing: 8px;
+            text-shadow: 0 0 18px #35C8FF;
+            line-height: 1.3;
+        }
+
+        header p {
+            color: #B8C4E8;
+            margin-top: 8px;
+        }
+
+        hr {
+            width: 85%;
+            max-width: 1100px;
+            height: 2px;
+            border: none;
+            margin: 20px auto;
+            background: linear-gradient(
+                to right,
+                transparent,
+                #35C8FF,
+                #7047EB,
+                transparent
+            );
+        }
+
+        /* CONTENIDO PRINCIPAL */
+
+        main {
+            width: 92%;
+            max-width: 1200px;
+            margin: 30px auto;
+        }
+
+        .imagen-principal {
+            display: block;
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 16px;
+            border: 2px solid #35C8FF;
+            box-shadow: 0 0 25px #35205F;
+        }
+
+        /* TARJETAS DE TEXTO */
+
+        .texto {
+            background: rgba(21, 27, 59, 0.92);
+            border: 1px solid #7047EB;
+            border-radius: 16px;
+            padding: 28px;
+            margin: 30px 0;
+            box-shadow: 0 0 20px rgba(53, 200, 255, 0.10);
+        }
+
+        .texto p {
+            margin-bottom: 18px;
+            text-align: justify;
+        }
+
+        .texto p:last-child {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            color: #35C8FF;
+            text-align: center;
+            font-size: clamp(25px, 4vw, 34px);
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        h3 {
+            color: #B49AFF;
+            font-size: 22px;
+            margin: 25px 0 10px;
+        }
+
+        /* SEGUNDA IMAGEN */
+
+        .imagen-galaxia {
+            display: block;
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 14px;
+            border: 2px solid #7047EB;
+            margin: 25px 0;
+            box-shadow: 0 0 22px rgba(112, 71, 235, 0.3);
+        }
+
+        /* DEFINICIONES DEL ESPACIO */
+
+        .definicion {
+            border-left: 4px solid #35C8FF;
+            padding: 5px 0 5px 18px;
+            margin: 25px 0;
+        }
+
+        .definicion h3 {
+            margin-top: 0;
+            color: #35C8FF;
+        }
+
+        .ejemplo {
+            color: #B8C4E8;
+            font-style: italic;
+            margin-top: 8px;
+        }
+
+        /* CURIOSIDADES */
+
+        .curiosidades {
+            background: rgba(21, 27, 59, 0.95);
+            border: 1px solid #7047EB;
+            border-radius: 16px;
+            padding: 30px;
+            margin: 35px 0;
+            box-shadow: 0 0 25px rgba(53, 200, 255, 0.10);
+        }
+
+        .curiosidades > p {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .curiosidades h3 {
+            border-bottom: 1px solid #303962;
+            padding-bottom: 8px;
+        }
+
+        .curiosidades ol {
+            padding-left: 25px;
+        }
+
+        .curiosidades li {
+            padding-left: 5px;
+            margin-bottom: 16px;
+        }
+
+        .curiosidades li::marker {
+            color: #35C8FF;
+            font-weight: bold;
+        }
+
+        strong {
+            color: #35C8FF;
+        }
+
+        /* PIE DE PÁGINA */
+
+        footer {
+            text-align: center;
+            padding: 25px 15px;
+            margin-top: 40px;
+            background: rgba(8, 11, 26, 0.65);
+            border-top: 1px solid #303962;
+            color: #35C8FF;
+            font-size: 14px;
+        }
+
+        /* ADAPTACIÓN A CELULARES */
+
+        @media (max-width: 650px) {
+            header {
+                padding-top: 22px;
+            }
+
+            h1 {
+                letter-spacing: 5px;
+            }
+
+            main {
+                width: 94%;
+                margin-top: 15px;
+            }
+
+            .imagen-principal {
+                height: 220px;
+            }
+
+            .imagen-galaxia {
+                height: 230px;
+            }
+
+            .texto,
+            .curiosidades {
+                padding: 20px;
+            }
+
+            .texto p,
+            .curiosidades > p {
+                text-align: left;
+            }
+
+            h3 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>SPACE</h1>
+        <p>Descubre los misterios del universo</p>
+        <hr>
+    </header>
+
+    <main>
+
+        <!-- IMAGEN PRINCIPAL -->
+
+        <section>
+            <img
+                src="im.jpg"
+                alt="Paisaje del espacio exterior"
+                class="imagen-principal"
+            >
+        </section>
+
+        <!-- INTRODUCCIÓN -->
+
+        <section class="texto">
+            <h2>La ciencia y el universo</h2>
+
+            <p>
+                La ciencia es la clave para descubrir los secretos del
+                universo: une a la humanidad con cada descubrimiento,
+                expande nuestro conocimiento y despierta nuestra
+                imaginación.
+            </p>
+
+            <p>
+                Al navegar por las arenas del tiempo y el espacio,
+                la ciencia da contexto y significado a mediciones
+                grandes y pequeñas. ¿Sabías que existen cantidades
+                inmensas de estrellas en el universo? La nueva era de
+                los descubrimientos científicos de la NASA continúa,
+                ¡y tú eres parte de ella!
+            </p>
+        </section>
+
+        <!-- INFORMACIÓN SOBRE UNA GALAXIA -->
+
+        <section class="texto">
+            <h2>La galaxia NGC 4258</h2>
+
+            <img
+                src="im2.jpg"
+                alt="Imagen de la galaxia NGC 4258"
+                class="imagen-galaxia"
+            >
+
+            <p>
+                NGC 4258 es una galaxia espiral famosa por tener dos
+                brazos espirales adicionales, considerados anómalos,
+                compuestos de gas caliente.
+            </p>
+
+            <p>
+                Los rayos X observados por Chandra muestran ondas de
+                choque sobrecalentadas creadas por chorros asociados
+                con su agujero negro central. Estas observaciones se
+                combinan con luz óptica del Hubble y datos infrarrojos
+                del telescopio espacial James Webb.
+            </p>
+
+            <p>
+                NGC 4258 ayuda a los científicos a estudiar cómo los
+                agujeros negros supermasivos pueden influir en la
+                estructura y evolución de una galaxia.
+            </p>
+        </section>
+
+        <!-- TIPOS DE ESPACIO -->
+
+        <section class="texto">
+            <h2>¿Qué significa la palabra espacio?</h2>
+
+            <div class="definicion">
+                <h3>1. Espacio físico</h3>
+
+                <p>
+                    Es el medio tridimensional donde existen y se
+                    mueven los objetos. Incluye dimensiones como largo,
+                    ancho y alto, y permite describir posiciones,
+                    distancias y movimientos.
+                </p>
+
+                <p>
+                    Se utiliza en física clásica, ingeniería y en
+                    nuestra vida cotidiana.
+                </p>
+
+                <p class="ejemplo">
+                    Ejemplo: "Hay poco espacio en esta habitación".
+                </p>
+            </div>
+
+            <div class="definicion">
+                <h3>2. Espacio exterior</h3>
+
+                <p>
+                    Es la región del universo más allá de la atmósfera
+                    terrestre. Contiene planetas, estrellas, galaxias,
+                    materia oscura y energía oscura.
+                </p>
+
+                <p>
+                    Es prácticamente un vacío, aunque no está
+                    completamente vacío: contiene partículas,
+                    radiación y campos gravitatorios.
+                </p>
+
+                <p class="ejemplo">
+                    Ejemplo: "El telescopio observa objetos en el
+                    espacio profundo".
+                </p>
+            </div>
+
+            <div class="definicion">
+                <h3>3. Espacio matemático</h3>
+
+                <p>
+                    En matemáticas, un espacio es un concepto abstracto
+                    que describe un conjunto de elementos con una
+                    estructura determinada.
+                </p>
+
+                <p>
+                    Algunos ejemplos importantes son:
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>Espacio vectorial:</strong>
+                        permite sumar vectores y multiplicarlos
+                        por escalares.
+                    </li>
+                    <li>
+                        <strong>Espacio métrico:</strong>
+                        permite definir distancias entre elementos.
+                    </li>
+                    <li>
+                        <strong>Espacio topológico:</strong>
+                        permite estudiar conceptos como continuidad
+                        y proximidad.
+                    </li>
+                </ul>
+
+                <p>
+                    Estos espacios ayudan a modelar fenómenos físicos,
+                    económicos y computacionales.
+                </p>
+            </div>
+        </section>
+
+        <!-- CURIOSIDADES -->
+
+        <section class="curiosidades">
+            <h2>Curiosidades del espacio</h2>
+
+            <p>
+                El espacio exterior está lleno de fenómenos extremos:
+                estrellas que vibran, planetas extraños, tormentas
+                gigantescas y distancias que desafían nuestra
+                imaginación.
+            </p>
+
+            <h3>1. Fenómenos extremos</h3>
+
+            <ol>
+                <li>
+                    <strong>El Sol late:</strong>
+                    su superficie oscila constantemente debido a ondas
+                    que recorren el astro, como resultado de su
+                    actividad interna.
+                </li>
+
+                <li>
+                    <strong>Las estrellas pueden cantar:</strong>
+                    las estrellas vibran en distintas frecuencias.
+                    Los astrónomos pueden convertir esas vibraciones
+                    en sonidos digitales, aunque el sonido no se
+                    propaga por el vacío del espacio.
+                </li>
+
+                <li>
+                    <strong>Planetas de diamante:</strong>
+                    algunos mundos ricos en carbono podrían contener
+                    materiales con estructura de diamante debido a
+                    las enormes presiones de su interior.
+                </li>
+            </ol>
+
+            <h3>2. Planetas y objetos raros</h3>
+
+            <ol>
+                <li>
+                    <strong>La Gran Mancha Roja de Júpiter:</strong>
+                    es una enorme tormenta que lleva activa al menos
+                    varios siglos.
+                </li>
+
+                <li>
+                    <strong>Planetas errantes:</strong>
+                    son mundos que no orbitan ninguna estrella y que
+                    pueden viajar solos por la galaxia.
+                </li>
+
+                <li>
+                    <strong>Venus gira al revés:</strong>
+                    su rotación es retrógrada. Por eso, en Venus,
+                    el Sol sale por el oeste y se oculta por el este.
+                </li>
+            </ol>
+
+            <h3>3. Escalas que desafían la imaginación</h3>
+
+            <ol>
+                <li>
+                    <strong>La Vía Láctea:</strong>
+                    contiene cientos de miles de millones de estrellas
+                    y es solo una entre miles de millones de galaxias
+                    del universo observable.
+                </li>
+
+                <li>
+                    <strong>La velocidad de la luz:</strong>
+                    la luz del Sol tarda aproximadamente 8 minutos
+                    y 20 segundos en llegar a la Tierra. La luz de
+                    algunas galaxias lejanas ha viajado durante
+                    miles de millones de años.
+                </li>
+            </ol>
+
+            <h3>4. Curiosidades físicas</h3>
+
+            <ol>
+                <li>
+                    <strong>El espacio no está completamente vacío:</strong>
+                    contiene partículas, radiación y campos
+                    gravitatorios, aunque su densidad suele ser
+                    extremadamente baja.
+                </li>
+
+                <li>
+                    <strong>Los astronautas crecen en órbita:</strong>
+                    pueden aumentar temporalmente su estatura unos
+                    centímetros porque los discos de la columna
+                    vertebral se expanden al estar en microgravedad.
+                </li>
+            </ol>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>EXPLORA EL UNIVERSO</p>
+        <p>SPACE | Proyecto educativo</p>
+    </footer>
+
+</body>
+</html>
